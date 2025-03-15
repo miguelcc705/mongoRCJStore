@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# 🛍️ Mongo Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mongo Store es una aplicación web que permite a los usuarios visualizar productos y, si aplica, obtener precios especiales según su identificación.  
+El proyecto está construido con **React** en el frontend y **Node.js con Express y MongoDB** en el backend.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Características Principales
+
+✅ Listado de productos obtenidos desde MongoDB  
+✅ Manejo de precios especiales por usuario  
+✅ Backend con Express y conexión a MongoDB  
+✅ Frontend en React con Bootstrap para diseño  
+✅ API para obtener y registrar precios especiales  
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Descripción |
+|------------|------------|
+| **React.js** | Framework para construir la interfaz de usuario |
+| **Node.js** | Entorno de ejecución para el backend |
+| **Express.js** | Framework para crear la API REST |
+| **MongoDB** | Base de datos NoSQL para almacenar productos y precios especiales |
+| **Bootstrap** | Librería para estilos y diseño responsive |
+
+---
+
+## 📂 Estructura del Proyecto
+```bash
+mongoRCJStore/
+│── backend/                # Código del servidor con Node.js y Express
+│   ├── models/             # Modelos de MongoDB y rutas del API (Productos, Precios Especiales)
+│   ├── index.js            # Archivo principal del backend
+│── tienda-app/             # Código del frontend con React
+│   ├── src/
+│   │   ├── components/     # Componentes React (Articulos, Subida)
+│   │   ├── App.js          # Componente principal
+│   │   ├── index.js        # Punto de entrada de React
+│   ├── public/             # Archivos públicos (favicon, index.html)
+│── README.md               # Documentación del proyecto
+│── .gitignore              # Archivos ignorados por Git
+│── package.json            # Dependencias y configuración del proyecto
+```
+
+## Como ejecutar el proyecto localmente
+
+1. Clonar el repositorio
+
+git clone https://github.com/miguelcc705/mongoRCJStore.git
+
+cd mongoRCJStore
+
+2. Instalar dependencias en el frontend
+
+### `cd tienda-app`
+
+### `npm install`
+
+3. Iniciar la aplicación frontend
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Iniciar la aplicación backend
 
-### `npm test`
+### `cd backend`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `node index.js`
 
-### `npm run build`
+El servidor se ejecutará en http://localhost:5000/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Configuración del usuario
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para simular un usuario en la aplicación, se debe modificar el archivo Articulos.js dentro de la carpeta components/ en tienda-app:
 
-### `npm run eject`
+const [usuarioId] = useState("777"); // Cambiar este ID según el usuario logueado
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📌 Justificación de Elecciones Técnicas
+✅ MongoDB: Requerimiento de la prueba técnica.
+✅ Express.js: Permite crear una API REST de manera rápida y eficiente.
+✅ React.js: Requerimiento de la prueba técnica.
+✅ La elección de JavaScript en lugar de TypeScript para este proyecto se basó en varios factores clave relacionados con la simplicidad del proyecto, velocidad de desarrollo y compatibilidad.
+✅ Bootstrap: Se utilizó para mejorar la presentación y la experiencia de usuario.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 📜 Licencia
+Este proyecto está bajo la Licencia MIT, lo que significa que puedes modificarlo y distribuirlo libremente.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 📬 Contacto
+📧 Desarrollador: Miguel Angel C.
+🔗 GitHub: miguelcc705
