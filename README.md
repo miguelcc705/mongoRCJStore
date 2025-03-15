@@ -1,7 +1,6 @@
 # 🛍️ Mongo Store
 
-Mongo Store es una aplicación web que permite a los usuarios visualizar productos y, si aplica, obtener precios especiales según su identificación.  
-El proyecto está construido con **React** en el frontend y **Node.js con Express y MongoDB** en el backend.
+Mongo Store es una aplicación web que permite a los usuarios visualizar productos y, si aplica, obtener precios especiales según su identificación.  El proyecto está construido con **React** en el frontend y **Node.js con Express y MongoDB** en el backend.
 
 ---
 
