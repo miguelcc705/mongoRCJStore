@@ -1,49 +1,3 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import { API_URL } from '../config';
-
-// const Subida = () => {
-//     const [usuarioId, setUsuarioId] = useState("");
-//     const [productoId, setProductoId] = useState("");
-//     const [precioEspecial, setPrecioEspecial] = useState("");
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         try {
-//             await axios.post(`${API_URL}/special-prices`, {
-//                 usuarioId,
-//                 productoId,
-//                 precioEspecial: parseFloat(precioEspecial)
-//             });
-//             alert("Precio especial agregado con éxito");
-//         } catch (error) {
-//             console.error("Error al agregar precio especial:", error);
-//             alert("Hubo un error al agregar el precio especial");
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <h2>Agregar Precio Especial</h2>
-//             <form onSubmit={handleSubmit}>
-//                 <label>Usuario ID:</label>
-//                 <input type="text" value={usuarioId} onChange={(e) => setUsuarioId(e.target.value)} required />
-
-//                 <label>Producto ID:</label>
-//                 <input type="text" value={productoId} onChange={(e) => setProductoId(e.target.value)} required />
-
-//                 <label>Precio Especial:</label>
-//                 <input type="number" value={precioEspecial} onChange={(e) => setPrecioEspecial(e.target.value)} required />
-
-//                 <button type="submit">Guardar</button>
-//             </form>
-//         </div>
-//     );
-// };
-
-// export default Subida;
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_URL } from '../config';
@@ -61,7 +15,7 @@ const Subida = () => {
                 const res = await axios.get(`${API_URL}/productos`);
                 setProductos(res.data); // Guardamos la lista de productos en el estado
             } catch (error) {
-                console.error("❌ Error al obtener productos:", error);
+                console.error(" Error al obtener productos:", error);
             }
         };
         fetchProductos();
@@ -81,8 +35,8 @@ const Subida = () => {
             setProductoId("");
             setPrecioEspecial("");
         } catch (error) {
-            console.error("❌ Error al agregar precio especial:", error);
-            alert("⚠️ Hubo un error al agregar el precio especial");
+            console.error(" Error al agregar precio especial:", error);
+            alert(" Hubo un error al agregar el precio especial");
         }
     };
 

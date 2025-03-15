@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product');
 
-// 📌 Obtener todos los productos
+//  Obtener todos los productos
 router.get('/', async (req, res) => {
     try {
         const productos = await Product.find();
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// 📌 Agregar un nuevo producto
+//  Agregar un nuevo producto
 router.post('/', async (req, res) => {
     const nuevoProducto = new Product({
         nombre: req.body.nombre,

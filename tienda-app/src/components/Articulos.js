@@ -10,18 +10,15 @@ const Articulos = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                //Obtener productos y precios especiales
                 const res = await axios.get(`${API_URL}/productos`);
                 const productosData = res.data;
-                console.log(productosData)
                 const preciosRes = await axios.get(`${API_URL}/special-prices`);
                 const preciosEspeciales = preciosRes.data;
-                console.log('productosData',productosData[0])
-                console.log('preciosEspeciales',preciosEspeciales[0].productoId._id)
                 const productosConPrecios = productosData.map(producto => {
                     const precioEspecial = preciosEspeciales.find(p =>
                         p.usuarioId === usuarioId && p.productoId._id === producto._id
                     );
-                    console.log('precioEspecial',precioEspecial)
                     return {
                         ...producto,
                         precioNormal: producto.precio,
@@ -40,7 +37,7 @@ const Articulos = () => {
 
     return (
         <div className="container mt-5">
-            {/* ✅ Mostrar el ID del usuario logueado */}
+            {/* Mostrar el ID del usuario logueado */}
             <div className="alert alert-secondary text-left fw-bold" style={{ maxWidth: "fit-content" }}>
                 Usuario Logueado: <span >{usuarioId}</span>
             </div>
